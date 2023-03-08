@@ -73,11 +73,9 @@ const Canvas: React.FC = (): JSX.Element => {
       <div className="flex flex-col items-center justify-center gap-5">
         <ColorPickerComponent setColor={setColor} color={color} />
         <ClearCanvasButton color={color} />
-        <FillCanvasButton color={color} />
+        <FillCanvasButton />
       </div>
       <canvas
-        // width={window.innerWidth}
-        // height={window.innerHeight}
         width={700}
         height={700}
         className="border border-white"
