@@ -7,7 +7,7 @@ import ClearCanvasButton from "./Partials/ClearCanvasButton";
 import FillCanvasButton from "./Partials/FillCanvasButton";
 
 // const socket = io("http://localhost:5000");
-const socket = io("https://t3-drawing-app-ws-7ibc.vercel.app");
+const socket = io("https://t3-drawing-app-ws-7ibc.vercel.app/socket");
 
 type DrawLinesProps = {
   prevPoint: Point | null;
