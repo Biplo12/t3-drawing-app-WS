@@ -12,7 +12,7 @@ export const drawLine = ({
   const width = 5;
   const lineColor = color;
 
-  let startPoint = prevPoint ?? currentPoint;
+  const startPoint = prevPoint ?? currentPoint;
 
   ctx.beginPath();
   ctx.lineWidth = width;

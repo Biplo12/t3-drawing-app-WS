@@ -55,7 +55,7 @@ const Canvas: React.FC = (): JSX.Element => {
       socket.off("canvas-state-from-server");
       socket.off("get-canvas-ready");
     };
-  }, [canvasRef]);
+  }, [canvasRef, clearCanvas]);
 
   function createLine({ prevPoint, currentPoint, ctx }: Draw) {
     socket.emit("draw-line", { prevPoint, currentPoint, ctx, color });
