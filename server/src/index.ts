@@ -1,7 +1,7 @@
-import express from "express";
-import { Server } from "socket.io";
-import http from "http";
-import cors from "cors";
+const express = require("express");
+const http = require("http");
+const cors = require("cors");
+const { Server } = require("socket.io");
 
 const allowedOrigins = [
   "http://localhost:3000",
@@ -20,18 +20,18 @@ const io = new Server(server, {
   },
 });
 
-type Point = {
+interface Point {
   x: number;
   y: number;
-};
+}
 
-type DrawLine = {
+interface DrawLine {
   prevPoint: Point | null;
   currentPoint: Point | null;
   color: string;
-};
+}
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: any) => {
   socket.on("client-ready", () => {
     socket.broadcast.emit("get-canvas-state");
   });
