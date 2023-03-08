@@ -6,7 +6,8 @@ import ColorPickerComponent from "../ColorPicker/ColorPickerComponent";
 import ClearCanvasButton from "./Partials/ClearCanvasButton";
 import FillCanvasButton from "./Partials/FillCanvasButton";
 
-const socket = io("http://localhost:5000");
+// const socket = io("http://localhost:5000");
+const socket = io("https://t3-drawing-app-ws-7ibc.vercel.app");
 
 type DrawLinesProps = {
   prevPoint: Point | null;
