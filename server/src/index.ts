@@ -5,7 +5,7 @@ const { Server } = require("socket.io");
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "next-drawing-gv1k0lu3r-biplo12.vercel.app",
+  "https://t3-drawing-app-ws.vercel.app",
 ];
 
 const app = express();
